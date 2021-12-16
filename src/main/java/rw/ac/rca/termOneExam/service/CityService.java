@@ -17,17 +17,18 @@ public class CityService {
 	private ICityRepository cityRepository;
 	
 	public Optional<City> getById(long id) {
-		
 		return cityRepository.findById(id);
 	}
 
 	public List<City> getAll() {
-		
-		return cityRepository.findAll();
+		 List <City> cities = cityRepository.findAll();
+		for(City city:cities) {
+			city.setFahrenheit((city.getWeather()*9/5)+32);
+		}
+		return cities;
 	}
 
 	public boolean existsByName(String name) {
-		
 		return cityRepository.existsByName(name);
 	}
 

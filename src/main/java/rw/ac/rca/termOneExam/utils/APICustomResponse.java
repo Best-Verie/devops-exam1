@@ -6,12 +6,10 @@ public class APICustomResponse {
 	
 	private String message;
 
-	
 	public APICustomResponse() {
 		super();
 	}
 
-	
 	public APICustomResponse(boolean status, String message) {
 		super();
 		this.status = status;

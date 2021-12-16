@@ -40,7 +40,6 @@ public class CityController {
 
 	@GetMapping("/all")
 	public List<City> getAll() {
-
 		return cityService.getAll();
 	}
 
